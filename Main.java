@@ -12,19 +12,12 @@ public class Main {
         boolean run = true;
         while(run){
             System.out.println("--------------------------------------");
-            System.out.println("Welcome to the inventory program:");
-            
-            // try{
-            
-            System.out.println("Press 1 to add an item\nPress 2 to delete an item\n" +
-             "Press 3 to update an item\nPress 4 to show all the items\n" + 
-             "Press 5 to quit the program" );
+            System.out.println("Welcome to the inventory program:");    
+            System.out.println("Press 1 to add an item.\nPress 2 to delete an item.\n" +
+             "Press 3 to update an item.\nPress 4 to show all the items.\n" + 
+             "Press 5 to quit the program." );
              option = input.nextInt();
-            
-            // }catch(InputMismatchException e){
-            //     System.out.println("Invalid input please try again");
-            // }
-             
+          
             switch(option){
                 case 1: addItem(); break;
                 case 2: deleteItem(); break;
@@ -59,7 +52,7 @@ public class Main {
     } 
 
     public static void deleteItem(){
-        System.out.println("Enter the serial number:");
+        System.out.println("Enter the serial number of the item to delete:");
         String sNumber = input.next();
 
         for(int i = 0; i < inventory.size(); i++){
@@ -72,7 +65,7 @@ public class Main {
     }
 
     public static void updateItem(){
-        System.out.println("Enter the serial number:");
+        System.out.println("Enter the serial number of the item to change:");
         String sNumber = input.next();
 
         System.out.println("Enter the new name:");

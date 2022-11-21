@@ -61,7 +61,7 @@ public class Main {
              "Press 3 to update an item.\nPress 4 to show all the items.\n" + 
              "Press 5 to quit the program." );
              option = input.nextInt();
-          
+             input.nextLine();
             switch(option){
                 case 1: addItem(); break;
                 case 2: deleteItem(); break;
@@ -77,17 +77,18 @@ public class Main {
         Item newItem = new Item();
 
         System.out.println("Enter the name:");
-        String name = input.next();
+        String name = input.nextLine();
         newItem.setName(name);
 
        
 
         System.out.println("Enter the value in dollars (whole number):");
         int value = input.nextInt();
+        input.nextLine();
         newItem.setValue(value);
 
         System.out.println("Enter the serial number:");
-        String sNumber = input.next();
+        String sNumber = input.nextLine();
         newItem.setSNumber(sNumber);
        
         
@@ -97,7 +98,7 @@ public class Main {
 
     public static void deleteItem(){
         System.out.println("Enter the serial number of the item to delete:");
-        String sNumber = input.next();
+        String sNumber = input.nextLine();
 
         for(int i = 0; i < inventory.size(); i++){
             
@@ -110,13 +111,14 @@ public class Main {
 
     public static void updateItem(){
         System.out.println("Enter the serial number of the item to change:");
-        String sNumber = input.next();
+        String sNumber = input.nextLine();
 
         System.out.println("Enter the new name:");
-        String name = input.next();
+        String name = input.nextLine();
         
         System.out.println("Enter the new value in dollars (whole number):");
         int value = input.nextInt();
+        input.nextLine();
 
         Item updatedElement = new Item(name, sNumber, value);
 

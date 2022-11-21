@@ -136,7 +136,7 @@ public class Main {
         System.out.println("Items in Inventory:");
         for(int i = 0; i < inventory.size(); i++){
             Item temp = inventory.get(i);
-            System.out.println(temp.getName() + ", " + temp.getSNumber() + ", " + temp.getValue());
+            System.out.println(temp.getName() + "," + temp.getSNumber() + "," + temp.getValue());
         }
     }
    

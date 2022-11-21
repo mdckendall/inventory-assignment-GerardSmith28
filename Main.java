@@ -80,16 +80,14 @@ public class Main {
         String name = input.nextLine();
         newItem.setName(name);
 
-       
+        System.out.println("Enter the serial number:");
+        String sNumber = input.nextLine();
+        newItem.setSNumber(sNumber);
 
         System.out.println("Enter the value in dollars (whole number):");
         int value = input.nextInt();
         input.nextLine();
         newItem.setValue(value);
-
-        System.out.println("Enter the serial number:");
-        String sNumber = input.nextLine();
-        newItem.setSNumber(sNumber);
        
         
         inventory.add(newItem);

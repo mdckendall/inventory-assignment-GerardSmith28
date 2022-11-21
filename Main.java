@@ -56,9 +56,7 @@ public class Main {
         int option = 0;
 
         boolean run = true;
-        while(run){
-            System.out.println("--------------------------------------");
-            System.out.println("Welcome to the inventory program:");    
+        while(run){  
             System.out.println("Press 1 to add an item.\nPress 2 to delete an item.\n" +
              "Press 3 to update an item.\nPress 4 to show all the items.\n" + 
              "Press 5 to quit the program." );
@@ -69,8 +67,8 @@ public class Main {
                 case 2: deleteItem(); break;
                 case 3: updateItem(); break;
                 case 4: print(); break;
-                case 5: System.out.println("Have a good day!"); run = false; break;
-                default: System.out.println("Sorry, invalid input. Please try again."); break;
+                case 5: run = false; break;
+                default: break;
                 }   
         }
     }
@@ -132,8 +130,7 @@ public class Main {
     }
     
     public static void print(){
-        System.out.println("--------------------------------------");
-        System.out.println("Items in Inventory:");
+
         for(int i = 0; i < inventory.size(); i++){
             Item temp = inventory.get(i);
             System.out.println(temp.getName() + "," + temp.getSNumber() + "," + temp.getValue());
